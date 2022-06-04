@@ -1,0 +1,41 @@
+.container{
+    margin: 0 auto;
+    width: 60%;
+}
+.flex-container{
+    justify-content: center;
+    text-align: center;
+}
+.input-field{
+    width: 100%;
+    margin-top: 50px;
+}
+
+.input-field button {
+    margin-left: 10px;
+}
+
+.book-list{
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.book{
+    width: 300px;
+    margin: 10px;
+    height: 330px;
+}
+.author{
+    margin-bottom: 10px;
+}
+.image{
+    margin: 0 auto;
+    transition: all 0.2s ease-in-out
+}
+
+.image:hover{
+    transform: scale(1.1);
+}
