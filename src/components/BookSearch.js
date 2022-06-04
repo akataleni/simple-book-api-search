@@ -25,14 +25,6 @@ function BookSearch() {
   const [search, setSearch] = useState("");
   const [foundBooks, setFoundBooks] = useState([]);
 
-  function handleCheck(value) {
-    if (value === !undefined) {
-      return value;
-    } else {
-      return "";
-    }
-  }
-
   function handleClick(e) {
     e.preventDefault();
     axios
@@ -51,6 +43,12 @@ function BookSearch() {
           <Input
             value={search}
             onChange={(e) => setSearch(e.target.value)}
+            onKeyPress={(event) => {
+              if (event.key === "Enter") {
+                event.preventDefault();
+                handleClick(event);
+              }
+            }}
             placeholder="Write a book title..."
             size="md"
           />
