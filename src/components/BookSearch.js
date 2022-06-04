@@ -1,14 +1,8 @@
 import React, { useState } from "react";
-import { FormProvider, useForm } from "react-hook-form";
 import {
   Button,
   Flex,
   Input,
-  FormErrorMessage,
-  FormLabel,
-  FormControl,
-  List,
-  ListItem,
   Text,
   Link,
   Box,
@@ -53,7 +47,7 @@ function BookSearch() {
             size="md"
           />
           <Button colorScheme="blue" variant="solid" onClick={handleClick}>
-            Submit
+            Search
           </Button>
         </Flex>
         <div className="book-list">
@@ -61,7 +55,7 @@ function BookSearch() {
             foundBooks.map((book, i) => (
               <Box
                 maxW="md"
-                borderWidth="1px"
+                borderWidth="2px"
                 borderRadius="lg"
                 overflow="hidden"
                 key={i}
@@ -89,7 +83,21 @@ function BookSearch() {
               </Box>
             ))
           ) : (
-            <Text>Not found</Text>
+            <Box
+              maxW="md"
+              borderWidth="2px"
+              borderRadius="lg"
+              overflow="hidden"
+              className="book-error"
+            >
+              <Box p="6">
+                <Text fontWeight={"black"}>Oops, something went wrong.</Text>
+                <Text fontWeight={"black"} className="text">
+                  404
+                </Text>
+                <Text fontWeight={"bold"}>Book not found.</Text>
+              </Box>
+            </Box>
           )}
         </div>
       </Flex>

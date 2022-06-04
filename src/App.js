@@ -1,5 +1,4 @@
 import { Flex } from "@chakra-ui/react";
-import "./App.css";
 import BookSearch from "./components/BookSearch";
 
 function App() {

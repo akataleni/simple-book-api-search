@@ -27,6 +27,21 @@
     width: 300px;
     margin: 10px;
     height: 330px;
+    background-color: #b3d6f8;
+    transition: all 0.2s ease-in-out;
+}
+
+.book:hover{
+    background-color: #87bbf0;
+}
+.book-error{
+    width: 300px;
+    margin: 10px;
+    height: 300px;
+    background-color: #b3d6f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .author{
     margin-bottom: 10px;
@@ -38,4 +53,7 @@
 
 .image:hover{
     transform: scale(1.1);
+}
+.text{
+    font-size: 80px;
 }
